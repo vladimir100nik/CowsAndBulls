@@ -6,34 +6,50 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="game.MainController"
             prefHeight="400.0" prefWidth="600.0">
     <top>
         <HBox>
-            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
-            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
-            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
-            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner fx:id="num1" initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner fx:id="num2" initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner fx:id="num3" initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner fx:id="num4" initialValue="5" max="9" min="0" prefWidth="90"/>
 
-            <Button text="Go!"/>
+            <Button text="Go!" onAction="#go"/>
 
 
         </HBox>
 
     </top>
-<center>
-        <TableView>
+    <center>
+        <TableView fx:id="turns">
             <columns>
-                <TableColumn text="turn #"/>
-                <TableColumn text="Guess"/>
-                <TableColumn text="Bulls"/>
-                <TableColumn text="Cows"/>
+                <TableColumn text="turn #">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="turnNr"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Guess">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="guess"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Bulls">
+                <cellValueFactory>
+                    <PropertyValueFactory property="bulls"/>
+                </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Cows">
+                <cellValueFactory>
+                    <PropertyValueFactory property="cows"/>
+                </cellValueFactory>
+                </TableColumn>
             </columns>
         </TableView>
 
 
-
-</center>
+    </center>
 </BorderPane>
