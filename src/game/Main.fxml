@@ -38,14 +38,14 @@
                     </cellValueFactory>
                 </TableColumn>
                 <TableColumn text="Bulls">
-                <cellValueFactory>
-                    <PropertyValueFactory property="bulls"/>
-                </cellValueFactory>
+                    <cellValueFactory>
+                        <PropertyValueFactory property="bulls"/>
+                    </cellValueFactory>
                 </TableColumn>
                 <TableColumn text="Cows">
-                <cellValueFactory>
-                    <PropertyValueFactory property="cows"/>
-                </cellValueFactory>
+                    <cellValueFactory>
+                        <PropertyValueFactory property="cows"/>
+                    </cellValueFactory>
                 </TableColumn>
             </columns>
         </TableView>
