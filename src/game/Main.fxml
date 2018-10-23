@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="game.MainController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox>
+            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
+            <Spinner initialValue="5" max="9" min="0" prefWidth="90"/>
+
+            <Button text="Go!"/>
+
+
+        </HBox>
+
+    </top>
+<center>
+        <TableView>
+            <columns>
+                <TableColumn text="turn #"/>
+                <TableColumn text="Guess"/>
+                <TableColumn text="Bulls"/>
+                <TableColumn text="Cows"/>
+            </columns>
+        </TableView>
+
+
+
+</center>
+</BorderPane>

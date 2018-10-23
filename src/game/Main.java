@@ -2,6 +2,7 @@ package game;
 
 import javafx.application.Application;
 import javafx.beans.binding.Bindings;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,19 +20,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Pane root = new VBox();
-//        Button btn = new Button("Hello");
-        Label lbl =new Label("It's Java fx");
-        TextField txt = new TextField();
-        lbl.textProperty().bind(
-                Bindings.concat("Hello, ", txt.textProperty(), "!"));
-
-//        btn.setOnAction(e -> {
-//            lbl.setText("Hello " + txt.getText() + "!");
-
-//        });
-
-        root.getChildren().addAll(lbl, txt);
+        Pane root = FXMLLoader.load(
+                getClass().getResource("/game/Main.fxml"));
 
         Scene scene = new Scene(root, 500, 300);
         primaryStage.setTitle("Bulls and Cows");

@@ -1,4 +1,6 @@
 module CowsAndBulls {
     requires  javafx.controls;
-    exports  game to javafx.graphics;
+    requires  javafx.fxml;
+    exports  game to javafx.graphics, javafx.fxml;
+    opens game to javafx.fxml;
 }
